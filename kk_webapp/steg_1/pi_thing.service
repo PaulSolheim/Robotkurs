@@ -2,7 +2,7 @@
 Description=Raspberry Pi Internet Thing
 
 [Service]
-ExecStart=/usr/bin/python /home/pi/kk_webapp/steg_2/webapp/main.py
+ExecStart=/usr/bin/python /home/pi/kk_webapp/steg_1/webapp/main.py
 
 [Install]
 WantedBy=multi-user.target
