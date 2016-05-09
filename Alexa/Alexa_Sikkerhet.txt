@@ -1,0 +1,71 @@
+﻿Alexa Security Information:
+
+kodeklubb+6:
+
+Security Profile:			AlexaPi
+Security Profile ID:	amzn1.application.d9bf238d7896428f99a8b775ecd67dfe
+Client ID:						amzn1.application-oa2-client.2c8975251fa64c769ebb925c04b955eb
+Client Secret:				2373517b9bf5d62180f2249a0b5f44ac3bc7aeea8c2d9cd3851132c26926b5db
+
+kodeklubb+1:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+2:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+3:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+4:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+5:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+7:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+8:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+9:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
+
+kodeklubb+10:
+
+Security Profile:			AlexaPi
+Security Profile ID:	
+Client ID:						
+Client Secret:				
