@@ -1,71 +1,61 @@
 ﻿Alexa Security Information:
 
-kodeklubb+6:
-
-Security Profile:			AlexaPi
-Security Profile ID:	amzn1.application.d9bf238d7896428f99a8b775ecd67dfe
-Client ID:						amzn1.application-oa2-client.2c8975251fa64c769ebb925c04b955eb
-Client Secret:				2373517b9bf5d62180f2249a0b5f44ac3bc7aeea8c2d9cd3851132c26926b5db
-
 kodeklubb+1:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.eec9d7dfe7424b848b102699813791ed
+Client ID:            amzn1.application-oa2-client.9a534636aefa426b980826744cf238b1
+Client Secret:        203f6b66ecad06becb559d53a33caf76b9ed2bd69e02e1d7df8ed4f9080642b6
 
 kodeklubb+2:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.78622b2d4b964fe9b72bb1508abee8ab
+Client ID:            amzn1.application-oa2-client.823dfbedc93d4c2f994fcaf54c7d9e55
+Client Secret:        6d8312676f292adf9317116367896dc511474c60addff0827caa36cd6dd0340e
 
 kodeklubb+3:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.41e7cc9db4cf4da4bf337d51630c97d5
+Client ID:            amzn1.application-oa2-client.351b589f7c4f490aaf17196b5887ae48
+Client Secret:        c7aeaa781bc2d0fca9c884bc9d4c6c4b5d52fb1eabd23d9775cbe20a6ac0ef05
 
 kodeklubb+4:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.f51e78231abc46ffa017efbe2ffc6038
+Client ID:            amzn1.application-oa2-client.9bbf669f2ead454fa7e479255033ff01
+Client Secret:        c2d22bc1310f8fc17faceaaf6ceb1fcf3e1eea336e4da08949ec4eb1520c99a1
 
 kodeklubb+5:
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.4b455c215d144e13be106f6a75e5a670
+Client ID:            amzn1.application-oa2-client.72a91079d6094092bb98522b265c54e3
+Client Secret:        4a8a38bb873f11822311e47f0177107ed466f01dd406e32e108953c2dc37fe9c
 
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+kodeklubb+6:
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.d9bf238d7896428f99a8b775ecd67dfe
+Client ID:            amzn1.application-oa2-client.2c8975251fa64c769ebb925c04b955eb
+Client Secret:        2373517b9bf5d62180f2249a0b5f44ac3bc7aeea8c2d9cd3851132c26926b5db
 
 kodeklubb+7:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.072968e148ce4e929727b99b24000f0e
+Client ID:            amzn1.application-oa2-client.1cdaec4b45bb44429f980c303d6f538f
+Client Secret:        7a2bce6949d8d47f83e35ada37d5f7c4d30bd805483cd432fd216bdacd5462c8
 
 kodeklubb+8:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.c8faae02ea07474aba3650e48c3d846a
+Client ID:            amzn1.application-oa2-client.287e322eb2b84b36be79da7e09138bed
+Client Secret:        bff548459ec1830cdc5e8f57504a75d1eb586acd18c45fc68d486a1248dcb292
 
 kodeklubb+9:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.77f6a93c4f6b48a0af4f1dd643099624
+Client ID:            amzn1.application-oa2-client.0a9802b8f0be4f759375d11fb6944372
+Client Secret:        c0226367b36b53de9c7df95a7cfd5bd095f8ea34160cf9917142fe359ca39cd2
 
 kodeklubb+10:
-
-Security Profile:			AlexaPi
-Security Profile ID:	
-Client ID:						
-Client Secret:				
+Security Profile:     AlexaPi
+Security Profile ID:  amzn1.application.354f02760f8e4d43840a6fc126b076e9
+Client ID:            amzn1.application-oa2-client.0e67935af2534a44b3f662940c22a988
+Client Secret:        a3b0c5047f0d36872e54483acf190fc4d399ff5f94070b34f0a8ec1e62b8bbb9
