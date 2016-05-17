@@ -1,0 +1,39 @@
+﻿Ivona Sikkerhet
+
+Signed up using kodeklubb+X@gmail.com
+using my name, address, kodeklubben oppegård as company name.
+
+Position: Teacher
+Timezone: Europe/Oslo
+Service delivery address is the same as billing address.
+
+Your project:
+1-10 employees
+Social media
+up to 2 years
+No
+Don't know
+E-learning/Education
+Linux/Unix
+
+Your project description:
+
+1. A short description of the purpose of the application
+The application will be used to teach kids computer programming and robotics and how to integrate text-to-speech technologies when creating robots.
+
+2. The target market
+educational market
+
+3. The distribution channel of the application
+Google Play
+
+4. Product's architecture – please describe how your application uses IVONA Speech Cloud. 
+Teaching kids how to use text-to-speech to make robotics projects that interact using speech.
+
+5. Provide programing language used in the project.
+Python
+
+kodeklubb+6
+accessKey=GDNAJH7RLAOVFNLQ5BZQ
+secretKey=veOJDSXdTPMNnQjiFJd8Nl/dRWZ3hGRHR1vp5HgB
+
