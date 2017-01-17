@@ -11,7 +11,7 @@ def log_data():
     output_streng = ",".join(str(value) for value in sense_data)
     batch_data.append(output_streng)
 
-def file_setup():
+def file_setup(filnavn):
     header = ["temp_h", "temp_p", "luftfuktighet", "lufttrykk", "pitch",
               "roll", "yaw", "mag_x", "mag_y", "mag_z",
               "accel_x", "accel_y", "accel_z",
@@ -57,8 +57,22 @@ def get_sense_data():
     
 ##### Hovedprogrammet ######
 sense = SenseHat()
+batch_data = []
+
+if FILNAVN == "":
+    filnavn = "Datalogg-"+str(datetime.now())+".csv"
+else:
+    filnavn = FILNAVN+"-"+str(datetime.now())+".csv"
+
+file_setup(filnavn)
 
 while True:
     sense_data = get_sense_data()
-    print(sense_data)
-    
+    log_data()
+
+    if len(batch_data) >= BUFFER:
+        print("Skriver til fil..")
+        with open(filnavn, "a") as f:
+            for linje in batch_data:
+                f.write(linje + "\n")
+            batch_data = []
