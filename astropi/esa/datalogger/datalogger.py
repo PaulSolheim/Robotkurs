@@ -10,8 +10,11 @@ class DataLogger:
         self.filnavn = "Datalogg-"+str(datetime.now())+".csv"
         self.file_setup(self.filnavn)        
 
-    def log_data(self):
+    def log_data(self, astronaut_status):
         sense_data = self.get_sense_data()
+        
+        # append astronaut_status
+        sense_data.append(astronaut_status)
         
         output_streng = ",".join(str(value) for value in sense_data)
         self.batch_data.append(output_streng)
@@ -28,7 +31,7 @@ class DataLogger:
                   "roll", "yaw", "mag_x", "mag_y", "mag_z",
                   "accel_x", "accel_y", "accel_z",
                   "gyro_x", "gyro_y", "gyro_z",
-                  "datetime"]
+                  "datetime", "astronaut"]
 
         with open(filnavn, "w") as f:
             f.write(",".join(str(value) for value in header)+ "\n")
