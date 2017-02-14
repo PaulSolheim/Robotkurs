@@ -1,4 +1,3 @@
-##### Biblioteker ######
 from sense_hat import SenseHat
 from datetime import datetime
 
@@ -7,37 +6,34 @@ class DataLogger:
         self.buffer = 10
         self.sense = SenseHat()
         self.batch_data = []
-        self.filnavn = "Datalogg-"+str(datetime.now())+".csv"
-        self.file_setup(self.filnavn)        
+        self.filename = "Datalogg-"+str(datetime.now())+".csv"
+        self.file_setup(self.filename)        
 
-    def log_data(self, astronaut_status):
+    def log_data(self):
         sense_data = self.get_sense_data()
         
-        # append astronaut_status
-        sense_data.append(astronaut_status)
-        
-        output_streng = ",".join(str(value) for value in sense_data)
-        self.batch_data.append(output_streng)
+        output_string = ",".join(str(value) for value in sense_data)
+        self.batch_data.append(output_string)
 
         if len(self.batch_data) >= self.buffer:
-            print("Skriver til fil..")
-            with open(self.filnavn, "a") as f:
-                for linje in self.batch_data:
-                    f.write(linje + "\n")
+            print("Writing to file..")
+            with open(self.filename, "a") as f:
+                for line in self.batch_data:
+                    f.write(line + "\n")
                 self.batch_data = []
 
-    def file_setup(self, filnavn):
-        header = ["temp_h", "temp_p", "luftfuktighet", "lufttrykk", "pitch",
+    def file_setup(self, filename):
+        header = ["datetime", "temp_h", "temp_p", "humidity", "pressure", "pitch",
                   "roll", "yaw", "mag_x", "mag_y", "mag_z",
                   "accel_x", "accel_y", "accel_z",
-                  "gyro_x", "gyro_y", "gyro_z",
-                  "datetime", "astronaut"]
+                  "gyro_x", "gyro_y", "gyro_z"]
 
-        with open(filnavn, "w") as f:
+        with open(filename, "w") as f:
             f.write(",".join(str(value) for value in header)+ "\n")
 
     def get_sense_data(self):
         sense_data = []
+        sense_data.append(datetime.now())
         sense_data.append(self.sense.get_temperature_from_humidity())
         sense_data.append(self.sense.get_temperature_from_pressure())
         sense_data.append(self.sense.get_humidity())
@@ -67,5 +63,4 @@ class DataLogger:
         z = gyro["z"]
         sense_data.extend([x, y, z])
 
-        sense_data.append(datetime.now())
         return sense_data

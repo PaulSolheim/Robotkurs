@@ -1,12 +1,14 @@
 # import libraries
 from sense_hat import SenseHat
-from datetime import datetime
-from datalogger import DataLogger
+from datetime import datetime, timedelta
+from astrologger import AstroLogger
 from random import randint, randrange
-import animasjoner
-import tekster
+from time import sleep
+import animation
+import text
 
-baseline_mean = 0
+baseline = 0
+astronaut_status = False
 
 def baseline_humidity():
     baseline_missing = True
@@ -14,11 +16,13 @@ def baseline_humidity():
     while baseline_missing:
         # until baseline range is less than 1 percent
         base_values = get_baseline_values()
-        base_range = baseline_range(base_values)
-        if base_range < 1:
+        base_range = find_range(base_values)
+        baseline_mean = find_mean(base_values)
+        if (base_range < 1) and (baseline_mean > 10):
             baseline_missing = False
-    baseline_mean = baseline_mean(base_values)
 
+    logger.log_data("baseline", baseline_mean, baseline, astronaut_status)
+    
     return baseline_mean
 
 def get_baseline_values():
@@ -28,15 +32,16 @@ def get_baseline_values():
         if humidity > 100:
             humidity = 100
         baseline_values.append(humidity)
+        sleep(1)
     return baseline_values
 
-def baseline_range(baseline_values):
+def find_range(baseline_values):
     min_humidity = min(baseline_values)
-    max_humidity = max(baseline_valus)
+    max_humidity = max(baseline_values)
     baseline_range = max_humidity - min_humidity
     return baseline_range
 
-def baseline_mean(baseline_values):
+def find_mean(baseline_values):
     total = 0
     for x in baseline_values:
         total = total + x
@@ -54,6 +59,8 @@ def find_astronaut(baseline):
     if (baseline - humidity) > 4:
         # Humidity decrease by more than 4 percent
         astro_status = True
+    
+    logger.log_data("find_astronaut", astro_status, baseline, astronaut_status)
 
     return astro_status
 
@@ -63,11 +70,11 @@ sense = SenseHat()
 # set correct rotation for astropi
 sense.set_rotation(270)
 
-# initialize text strings
-tekster.init_tekst()
+# initialize text
+text.init_text()
 
 # initialize datalogger
-logger = DataLogger()
+logger = AstroLogger()
 
 # read baseline humidity until less than 1% variation
 baseline = baseline_humidity()
@@ -80,14 +87,11 @@ while True:
     # find astronaut
     astronaut_status = find_astronaut(baseline)
     
-    # write to the datalog
-    logger.log_data(astronaut_status)
-    
     # show an animation
-    animasjoner.vis_animasjon()
+    animation.show_animation()
 
     # show a trick question, facts or fun
-    tekster.vis_tekst()
+    text.show_text()
 
     # do new baseline if more than 10 minutes since last
     if datetime.now() > (last_baseline + time_between):
