@@ -20,8 +20,8 @@ def init_text():
     text.append("Trick Question? :()")
     # Facts
     text.append("We are: Elias, Kevin, Oscar, Mattis, Toan, Leander, Linnea, Jonas")
-    text.append("We are also: Alexander, Adrian, Helene, Håkon, Lukas, Magnus, Ethan and Kiran")
-    text.append("Our teachers are: Pål, Steinar, Sten Roger and Hans Petter")
+    text.append("We are also: Alexander, Adrian, Helene, Haakon, Lukas, Magnus, Ethan and Kiran")
+    text.append("Our teachers are: Paul, Steinar, Sten Roger and Hans Petter")
     text.append("Skedsmo Kodeklubb @ 400 000 meters above the earth!")
     text.append("We code at Kjeller Skole in Skedsmo, Norway")
     text.append("Norway looks like a spoon on a map")
