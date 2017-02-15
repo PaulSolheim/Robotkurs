@@ -9,14 +9,9 @@ import text
 
 baseline = 0
 astronaut_status = False
-sense = SenseHat()
-sense.set_rotation(270)
 
 def baseline_humidity():
     baseline_missing = True
-
-    # show baseline animation
-    animation.show_baseline()
 
     while baseline_missing:
         # until baseline range is less than 1 percent
@@ -26,7 +21,8 @@ def baseline_humidity():
         if (base_range < 1) and (baseline_mean > 10):
             baseline_missing = False
 
-    logger.log_data("baseline_humidity", baseline_mean, baseline, astronaut_status)
+    logger.log_data("baseline", baseline_mean, baseline, astronaut_status)
+    
     return baseline_mean
 
 def get_baseline_values():
@@ -37,16 +33,12 @@ def get_baseline_values():
             humidity = 100
         baseline_values.append(humidity)
         sleep(1)
-
-    logger.log_data("get_baseline_values", baseline_values, baseline, astronaut_status)
     return baseline_values
 
 def find_range(baseline_values):
     min_humidity = min(baseline_values)
     max_humidity = max(baseline_values)
     baseline_range = max_humidity - min_humidity
-
-    logger.log_data("find_range", baseline_range, baseline, astronaut_status)
     return baseline_range
 
 def find_mean(baseline_values):
@@ -68,9 +60,15 @@ def find_astronaut(baseline):
         # Humidity decrease by more than 4 percent
         astro_status = True
     
-    logger.log_data("find_astronaut", humidity, baseline, astro_status)
+    logger.log_data("find_astronaut", astro_status, baseline, astronaut_status)
 
     return astro_status
+
+# main program
+sense = SenseHat()
+
+# set correct rotation for astropi
+sense.set_rotation(270)
 
 # initialize text
 text.init_text()
@@ -88,15 +86,12 @@ time_between = timedelta(minutes=10)
 while True:
     # find astronaut
     astronaut_status = find_astronaut(baseline)
-
-    # show astronaut animation
-    animation.show_astronaut(astronaut_status)
+    
+    # show an animation
+    animation.show_animation()
 
     # show a trick question, facts or fun
     text.show_text()
-
-    # show a random animation
-    animation.show_animation()
 
     # do new baseline if more than 10 minutes since last
     if datetime.now() > (last_baseline + time_between):

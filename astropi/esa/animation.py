@@ -3,56 +3,6 @@ from time import sleep
 from random import randint
 
 sense = SenseHat()
-sense.set_rotation(270)
-
-def show_baseline():
-    b = (0, 0, 200)
-    r = (255, 0, 0)
-    g = (0, 255, 0)
-
-    image = [
-        b, b, b, b, b, b, b, b,
-        r, b, b, b, b, b, b, b,
-        b, r, b, r, b, b, b, b,
-        b, b, r, b, r, b, r, r,
-        b, b, b, b, b, r, b, b,
-        b, b, b, b, b, b, b, b,
-        g, g, g, g, g, g, g, g,
-        b, b, b, b, b, b, b, b
-        ]
-
-    sense.set_pixels(image)
-    
-def show_astronaut(astro_status):
-    b = (0, 0, 200)
-    r = (255, 0, 0)
-    g = (0, 255, 0)
-
-    if astro_status:
-        image = [
-            b, b, b, b, b, b, g, g,
-            b, b, b, b, b, g, g, b,
-            b, b, b, b, g, g, b, b,
-            g, b, b, b, g, g, b, b,
-            g, g, b, b, g, g, b, b,
-            b, g, b, g, g, b, b, b,
-            b, b, g, g, b, b, b, b,
-            b, b, g, g, b, b, b, b
-            ]
-    else:
-        image = [
-            r, r, b, b, b, b, b, r,
-            b, r, r, b, b, b, r, r,
-            b, b, r, r, r, r, r, b,
-            b, b, b, r, r, b, b, b,
-            b, b, r, r, r, r, b, b,
-            b, r, r, b, b, r, r, b,
-            r, r, b, b, b, b, r, r,
-            r, b, b, b, b, b, b, r
-            ]
-
-    sense.set_pixels(image)
-    sleep(3)
 
 def norway_animation():
     o = (255, 128, 0)
@@ -252,7 +202,6 @@ def coders_selection_2():
     z = [25,25,25]
     g = [0,255,0]
     u = [0,0,255]
-    b = [75,75,75]
 
     fjell = [
         o,o,w,w,w,w,w,w,
@@ -267,13 +216,12 @@ def coders_selection_2():
 
     tre = [
         w,w,w,w,w,w,w,w,
-        w,w,w,w,w,w,w,w,
-        w,w,w,g,w,w,w,w,
+        w,w.w,g,w,w,w,w,
         w,w,g,g,g,w,w,w,
         w,g,g,g,g,g,w,w,
         g,g,g,g,g,g,g,w,
-        w,w,w,b,b,w,w,w,
-        w,w,w,b,b,w,w,w
+        w,w,w,z,z,w,w,w,
+        w,w,w,z,z,w,w,w        
         ]
 
     sense.set_pixels(fjell)
@@ -325,7 +273,7 @@ def coders_selection_2():
         g, g, y, r, y, r, r, r, 
         g, g, g, y, r, r, r, r, 
         g, g, g, r, r, r, r, r, 
-        g, g, g, r, r, r, r, r
+        g, g, g, r, r, r, r, r,
         ]
         
     sense.set_pixels(image)
@@ -399,7 +347,7 @@ def coders_selection_3():
         b, b, b, b, b, b, b, b,
         b, r, r, r, r, r, r, b,
         b, b, r, b, b, r, b, b,
-        b, b, b, r, r, b, b, b
+        b, b, b, r, r, b, b, b,
         ]
 
     image2 = [
@@ -410,7 +358,7 @@ def coders_selection_3():
         b, b, b, b, b, b, b, b,
         b, b, b, r, r, b, b, b,
         b, b, r, b, b, r, b, b,
-        b, r, r, r, r, r, r, b
+        b, r, r, r, r, r, r, b,
         ]
 
     sense.set_pixels(image1)
@@ -418,215 +366,8 @@ def coders_selection_3():
     sense.set_pixels(image2)
     sleep(1)    
 
-def show_flower_animation():
-    e = (0, 0, 0)
-    w = (255, 255, 255)
-    f = (255, 0, 255)
-    c = (0, 255, 255)
-    p = (102, 0, 204)
-    y = (255, 255, 0)
-    b = (0, 0, 255)
-    o = (255, 128, 0)
-    g = (0, 255, 0)
-    r = (255, 0, 0)
-
-    frame1 = [e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,o,o,e,e,e,e,e,e,o,o,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e]
-    frame2 = [e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,o,e,e,o,e,e,e,e,e,o,o,e,e,e,e,e,e,o,o,e,e,e,e,e,o,e,e,o,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e]
-    frame3 = [e,e,e,e,e,e,e,e,e,o,e,e,e,e,o,e,e,e,o,e,e,o,e,e,e,e,e,o,o,e,e,e,e,e,e,o,o,e,e,e,e,e,o,e,e,o,e,e,e,o,e,e,e,e,o,e,e,e,e,e,e,e,e,e]
-    frame4 = [e,e,e,e,e,e,e,e,e,o,e,e,e,e,o,e,e,e,o,y,y,o,e,e,e,e,y,o,o,y,e,e,e,e,y,o,o,y,e,e,e,e,o,y,y,o,e,e,e,o,e,e,e,e,o,e,e,e,e,e,e,e,e,e]
-    frame5 = [o,e,e,e,e,e,e,o,e,o,e,e,e,e,o,e,e,e,o,y,y,o,e,e,e,e,y,o,o,y,e,e,e,e,y,o,o,y,e,e,e,e,o,y,y,o,e,e,e,o,e,e,e,e,o,e,o,e,e,e,e,e,e,o]
-    frame6 = [o,e,e,e,e,e,e,o,e,o,e,e,e,e,o,e,e,e,o,o,o,o,e,e,e,e,o,o,o,o,e,e,e,e,o,o,o,o,e,e,e,e,o,o,o,o,e,e,e,o,e,e,e,e,o,e,o,e,e,e,e,e,e,o]
-    frame7 = [o,e,e,e,e,e,e,o,e,o,e,e,e,e,o,e,e,e,o,o,o,o,e,e,e,e,o,r,r,o,e,e,e,e,o,r,r,o,e,e,e,e,o,o,o,o,e,e,e,o,e,e,e,e,o,e,o,e,e,e,e,e,e,o]
-    frame8 = [o,e,e,e,e,e,e,o,e,o,y,y,y,y,o,e,e,y,o,o,o,o,y,e,e,y,o,r,r,o,y,e,e,y,o,r,r,o,y,e,e,y,o,o,o,o,y,e,e,o,y,y,y,y,o,e,o,e,e,e,e,e,e,o]
-    frame9 = [o,e,e,e,e,e,e,o,e,o,y,y,y,y,o,e,e,y,r,o,o,r,y,e,e,y,o,r,r,o,y,e,e,y,o,r,r,o,y,e,e,y,r,o,o,r,y,e,e,o,y,y,y,y,o,e,o,e,e,e,e,e,e,o]
-    frame10 = [o,e,e,e,e,e,e,o,e,o,y,y,y,y,o,e,e,y,r,r,r,r,y,e,e,y,r,r,r,r,y,e,e,y,r,r,r,r,y,e,e,y,r,r,r,r,y,e,e,o,y,y,y,y,o,e,o,e,e,e,e,e,e,o]
-    frame11 = [o,e,e,e,e,e,e,o,e,o,y,y,y,y,o,e,e,y,r,r,r,r,y,e,e,y,r,p,p,r,y,e,e,y,r,p,p,r,y,e,e,y,r,r,r,r,y,e,e,o,y,y,y,y,o,e,o,e,e,e,e,e,e,o]
-    frame12 = [o,e,e,e,e,e,e,o,e,o,o,o,o,o,o,e,e,o,r,r,r,r,o,e,e,o,r,p,p,r,o,e,e,o,r,p,p,r,o,e,e,o,r,r,r,r,o,e,e,o,o,o,o,o,o,e,o,e,e,e,e,e,e,o]
-    frame13 = [o,y,y,y,y,y,y,o,y,o,o,o,o,o,o,y,y,o,r,r,r,r,o,y,y,o,r,p,p,r,o,y,y,o,r,p,p,r,o,y,y,o,r,r,r,r,o,y,y,o,o,o,o,o,o,y,o,y,y,y,y,y,y,o]
-    frame14 = [o,y,y,y,y,y,y,o,y,p,o,o,o,o,p,y,y,o,p,r,r,p,o,y,y,o,r,p,p,r,o,y,y,o,r,p,p,r,o,y,y,o,p,r,r,p,o,y,y,p,o,o,o,o,p,y,o,y,y,y,y,y,y,o]
-    frame15 = [o,y,y,y,y,y,y,o,y,p,o,o,o,o,p,y,y,o,p,f,f,p,o,y,y,o,f,p,p,f,o,y,y,o,f,p,p,f,o,y,y,o,p,f,f,p,o,y,y,p,o,o,o,o,p,y,o,y,y,y,y,y,y,o]
-    frame16 = [o,y,y,y,y,y,y,o,y,p,f,f,f,f,p,y,y,f,p,w,w,p,f,y,y,f,w,p,p,w,f,y,y,f,w,p,p,w,f,y,y,f,p,w,w,p,f,y,y,p,o,o,o,o,p,y,o,y,y,y,y,y,y,o]
-    frame17 = [o,e,e,e,e,e,e,o,e,p,f,f,f,f,p,e,e,f,p,w,w,p,f,e,e,f,w,p,p,w,f,e,e,f,w,p,p,w,f,e,e,f,p,w,w,p,f,e,e,p,f,f,f,f,p,e,o,e,e,e,e,e,e,o]
-    frame18 = [o,e,e,f,f,e,e,o,e,p,f,f,f,f,p,e,e,f,p,w,w,p,f,e,f,f,w,p,p,w,f,f,f,f,w,p,p,w,f,f,e,f,p,w,w,p,f,e,e,p,f,f,f,f,p,e,o,e,e,f,f,e,e,o]
-    frame19 = [o,y,y,f,f,y,y,o,y,p,f,f,f,f,p,y,y,f,p,w,w,p,f,y,f,f,w,p,p,w,f,f,f,f,w,p,p,w,f,f,y,f,p,w,w,p,f,y,y,p,f,f,f,f,p,y,o,y,y,f,f,y,y,o]
-    frame20 = [o,y,y,f,f,y,y,o,y,p,f,f,f,f,p,y,y,f,p,w,w,p,f,y,f,f,w,r,r,w,f,f,f,f,w,r,r,w,f,f,y,f,p,w,w,p,f,y,y,p,f,f,f,f,p,y,o,y,y,f,f,y,y,o]
-    frame21 = [o,y,y,f,f,y,y,o,y,p,f,f,f,f,p,y,y,f,p,r,r,p,f,y,f,f,r,r,r,r,f,f,f,f,r,r,r,r,f,f,y,f,p,r,r,p,f,y,y,p,f,f,f,f,p,y,o,y,y,f,f,y,y,o]
-    frame22 = [o,y,y,f,f,y,y,o,y,p,f,f,f,f,p,y,y,f,p,r,r,p,f,y,f,f,r,g,g,r,f,f,f,f,r,g,g,r,f,f,y,f,p,r,r,p,f,y,y,p,f,f,f,f,p,y,o,y,y,f,f,y,y,o]
-    frame23 = [g,y,y,f,f,y,y,g,y,g,f,f,f,f,g,y,y,f,g,r,r,g,f,y,f,f,r,g,g,r,f,f,f,f,r,g,g,r,f,f,y,f,g,r,r,g,f,y,y,g,f,f,f,f,g,y,g,y,y,f,f,y,y,g]
-    frame24 = [g,y,y,f,f,y,y,g,y,g,f,f,f,f,g,y,y,f,g,r,r,g,f,y,f,f,r,c,c,r,f,f,f,f,r,c,c,r,f,f,y,f,g,r,r,g,f,y,y,g,f,f,f,f,g,y,g,y,y,f,f,y,y,g]
-    frame25 = [c,y,y,f,f,y,y,c,y,c,f,f,f,f,c,y,y,f,c,r,r,c,f,y,f,f,r,c,c,r,f,f,f,f,r,c,c,r,f,f,y,f,c,r,r,c,f,y,y,c,f,f,f,f,c,y,c,y,y,f,f,y,y,c]
-    frame26 = [c,y,y,f,f,y,y,c,y,c,f,f,f,f,c,y,y,f,c,r,r,c,f,y,f,f,r,e,e,r,f,f,f,f,r,e,e,r,f,f,y,f,c,r,r,c,f,y,y,c,f,f,f,f,c,y,c,y,y,f,f,y,y,c]
-    frame27 = [c,y,y,f,f,y,y,c,y,c,f,f,f,f,c,y,y,f,e,r,r,e,f,y,f,f,r,e,e,r,f,f,f,f,r,e,e,r,f,f,y,f,e,r,r,e,f,y,y,c,f,f,f,f,c,y,c,y,y,f,f,y,y,c]
-    frame28 = [c,y,y,f,f,y,y,c,y,e,f,f,f,f,e,y,y,f,e,r,r,e,f,y,f,f,r,e,e,r,f,f,f,f,r,e,e,r,f,f,y,f,e,r,r,e,f,y,y,e,f,f,f,f,e,y,c,y,y,f,f,y,y,c]
-    frame29 = [e,y,y,f,f,y,y,e,y,e,f,f,f,f,e,y,y,f,e,r,r,e,f,y,f,f,r,e,e,r,f,f,f,f,r,e,e,r,f,f,y,f,e,r,r,e,f,y,y,e,f,f,f,f,e,y,e,y,y,f,f,y,y,e]
-    frame30 = [e,e,e,f,f,e,e,e,e,e,f,f,f,f,e,e,e,f,e,r,r,e,f,e,f,f,r,e,e,r,f,f,f,f,r,e,e,r,f,f,e,f,e,r,r,e,f,e,e,e,f,f,f,f,e,e,e,e,e,f,f,e,e,e]
-    frame31 = [e,e,e,f,f,e,e,e,e,e,f,f,f,f,e,e,e,f,e,e,e,e,f,e,f,f,e,e,e,e,f,f,f,f,e,e,e,e,f,f,e,f,e,e,e,e,f,e,e,e,f,f,f,f,e,e,e,e,e,f,f,e,e,e]
-    frame32 = [e,e,e,f,f,e,e,e,e,e,f,e,e,f,e,e,e,f,e,e,e,e,f,e,f,e,e,e,e,e,e,f,f,e,e,e,e,e,e,f,e,f,e,e,e,e,f,e,e,e,f,e,e,f,e,e,e,e,e,f,f,e,e,e]
-    frame33 = [e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e]
-
-    # Show each frame for 0.2 second
-    sense.set_pixels(frame1)
-    sleep(.2)
-    sense.set_pixels(frame2)
-    sleep(.2)
-    sense.set_pixels(frame3)
-    sleep(.2)
-    sense.set_pixels(frame4)
-    sleep(.2)
-    sense.set_pixels(frame5)
-    sleep(.2)
-    sense.set_pixels(frame6)
-    sleep(.2)
-    sense.set_pixels(frame7)
-    sleep(.2)
-    sense.set_pixels(frame8)
-    sleep(.2)
-    sense.set_pixels(frame9)
-    sleep(.2)
-    sense.set_pixels(frame10)
-    sleep(.2)
-    sense.set_pixels(frame11)
-    sleep(.2)
-    sense.set_pixels(frame12)
-    sleep(.2)
-    sense.set_pixels(frame13)
-    sleep(.2)
-    sense.set_pixels(frame14)
-    sleep(.2)
-    sense.set_pixels(frame15)
-    sleep(.2)
-    sense.set_pixels(frame16)
-    sleep(.2)
-    sense.set_pixels(frame17)
-    sleep(.2)
-    sense.set_pixels(frame18)
-    sleep(.2)
-    sense.set_pixels(frame19)
-    sleep(.2)
-    sense.set_pixels(frame20)
-    sleep(.2)
-    sense.set_pixels(frame21)
-    sleep(.2)
-    sense.set_pixels(frame22)
-    sleep(.2)
-    sense.set_pixels(frame23)
-    sleep(.2)
-    sense.set_pixels(frame24)
-    sleep(.2)
-    sense.set_pixels(frame25)
-    sleep(.2)
-    sense.set_pixels(frame26)
-    sleep(.2)
-    sense.set_pixels(frame27)
-    sleep(.2)
-    sense.set_pixels(frame28)
-    sleep(.2)
-    sense.set_pixels(frame29)
-    sleep(.2)
-    sense.set_pixels(frame30)
-    sleep(.2)
-    sense.set_pixels(frame31)
-    sleep(.2)
-    sense.set_pixels(frame32)
-    sleep(.2)
-    sense.set_pixels(frame33)
-    sleep(.2)
-
-def show_circle_animation():
-    c = (0, 255, 255)
-    b = (0, 0, 255)
-    y = (255, 255, 0)
-    g = (0, 255, 0)
-    o = (255, 128, 0)
-    p = (102, 0, 204)
-    r = (255, 0, 0)
-    f = (255, 0, 255)
-    w = (255, 255, 255)
-    e = (0, 0, 0)
-
-    frame1 = [e,e,e,o,o,e,e,e,e,e,o,e,e,o,e,e,e,o,e,e,e,e,o,e,o,e,e,e,e,e,e,o,o,e,e,e,e,e,e,o,e,o,e,e,e,e,o,e,e,e,o,e,e,o,e,e,e,e,e,o,o,e,e,e]
-    frame2 = [y,e,e,o,o,e,e,y,e,y,o,e,e,o,y,e,e,o,e,e,e,e,o,e,o,e,e,e,e,e,e,o,o,e,e,e,e,e,e,o,e,o,e,e,e,e,o,e,e,y,o,e,e,o,y,e,y,e,e,o,o,e,e,y]
-    frame3 = [y,r,r,o,o,r,r,y,r,y,o,e,e,o,y,r,r,o,e,e,e,e,o,r,o,e,e,e,e,e,e,o,o,e,e,e,e,e,e,o,r,o,e,e,e,e,o,r,r,y,o,e,e,o,y,r,y,r,r,o,o,r,r,y]
-    frame4 = [r,r,r,o,o,r,r,r,r,r,o,e,e,o,r,r,r,o,e,e,e,e,o,r,o,e,e,e,e,e,e,o,o,e,e,e,e,e,e,o,r,o,e,e,e,e,o,r,r,r,o,e,e,o,r,r,r,r,r,o,o,r,r,r]
-    frame5 = [r,r,r,o,o,r,r,r,r,r,o,b,b,o,r,r,r,o,b,e,e,b,o,r,o,b,e,e,e,e,b,o,o,b,e,e,e,e,b,o,r,o,b,e,e,b,o,r,r,r,o,b,b,o,r,r,r,r,r,o,o,r,r,r]
-    frame6 = [r,r,r,o,o,r,r,r,r,r,o,b,b,o,r,r,r,o,b,p,p,b,o,r,o,b,p,e,e,p,b,o,o,b,p,e,e,p,b,o,r,o,b,p,p,b,o,r,r,r,o,b,b,o,r,r,r,r,r,o,o,r,r,r]
-    frame7 = [r,r,r,o,o,r,r,r,r,r,o,b,b,o,r,r,r,o,b,p,p,b,o,r,o,b,p,f,f,p,b,o,o,b,p,f,f,p,b,o,r,o,b,p,p,b,o,r,r,r,o,b,b,o,r,r,r,r,r,o,o,r,r,r]
-    frame8 = [r,r,r,e,e,r,r,r,r,r,e,b,b,e,r,r,r,e,b,p,p,b,e,r,e,b,p,f,f,p,b,e,e,b,p,f,f,p,b,e,r,e,b,p,p,b,e,r,r,r,e,b,b,e,r,r,r,r,r,e,e,r,r,r]
-    frame9 = [o,o,o,e,e,o,o,o,o,o,e,b,b,e,o,o,o,e,b,p,p,b,e,o,e,b,p,f,f,p,b,e,e,b,p,f,f,p,b,e,o,e,b,p,p,b,e,o,o,o,e,b,b,e,o,o,o,o,o,e,e,o,o,o]
-    frame10 = [o,o,o,b,b,o,o,o,o,o,b,b,b,b,o,o,o,b,b,p,p,b,b,o,b,b,p,f,f,p,b,b,b,b,p,f,f,p,b,b,o,b,b,p,p,b,b,o,o,o,b,b,b,b,o,o,o,o,o,b,b,o,o,o]
-    frame11 = [o,o,o,b,b,o,o,o,o,o,b,b,b,b,o,o,o,b,b,e,e,b,b,o,b,b,e,f,f,e,b,b,b,b,e,f,f,e,b,b,o,b,b,e,e,b,b,o,o,o,b,b,b,b,o,o,o,o,o,b,b,o,o,o]
-    frame12 = [o,o,o,b,b,o,o,o,o,o,b,p,p,b,o,o,o,b,p,e,e,p,b,o,b,p,e,f,f,e,p,b,b,p,e,f,f,e,p,b,o,b,p,e,e,p,b,o,o,o,b,p,p,b,o,o,o,o,o,b,b,o,o,o]
-    frame13 = [o,o,o,b,b,o,o,o,o,o,b,p,p,b,o,o,o,b,p,f,f,p,b,o,b,p,f,y,y,f,p,b,b,p,f,y,y,f,p,b,o,b,p,f,f,p,b,o,o,o,b,p,p,b,o,o,o,o,o,b,b,o,o,o]
-    frame14 = [o,o,o,e,e,o,o,o,o,o,e,p,p,e,o,o,o,e,p,f,f,p,e,o,e,p,f,y,y,f,p,e,e,p,f,y,y,f,p,e,o,e,p,f,f,p,e,o,o,o,e,p,p,e,o,o,o,o,o,e,e,o,o,o]
-    frame15 = [b,b,b,e,e,b,b,b,b,b,e,p,p,e,b,b,b,e,p,f,f,p,e,b,e,p,f,y,y,f,p,e,e,p,f,y,y,f,p,e,b,e,p,f,f,p,e,b,b,b,e,p,p,e,b,b,b,b,b,e,e,b,b,b]
-    frame16 = [b,b,b,p,p,b,b,b,b,b,p,p,p,p,b,b,b,p,p,f,f,p,p,b,p,p,f,y,y,f,p,p,p,p,f,y,y,f,p,p,b,p,p,f,f,p,p,b,b,b,p,p,p,p,b,b,b,b,b,p,p,b,b,b]
-    frame17 = [b,b,b,p,p,b,b,b,b,b,p,f,f,p,b,b,b,p,f,f,f,f,p,b,p,f,f,y,y,f,f,p,p,f,f,y,y,f,f,p,b,p,f,f,f,f,p,b,b,b,p,f,f,p,b,b,b,b,b,p,p,b,b,b]
-    frame18 = [y,y,y,p,p,y,y,y,y,y,p,f,f,p,y,y,y,p,f,f,f,f,p,y,p,f,f,w,w,f,f,p,p,f,f,w,w,f,f,p,y,p,f,f,f,f,p,y,y,y,p,f,f,p,y,y,y,y,y,p,p,y,y,y]
-    frame19 = [y,y,y,p,p,y,y,y,y,y,p,f,f,p,y,y,y,p,f,f,f,f,p,y,p,f,f,r,r,f,f,p,p,f,f,r,r,f,f,p,y,p,f,f,f,f,p,y,y,y,p,f,f,p,y,y,y,y,y,p,p,y,y,y]
-    frame20 = [y,y,y,r,r,y,y,y,y,y,r,f,f,r,y,y,y,r,f,f,f,f,r,y,r,f,f,r,r,f,f,r,r,f,f,r,r,f,f,r,y,r,f,f,f,f,r,y,y,y,r,f,f,r,y,y,y,y,y,r,r,y,y,y]
-    frame21 = [y,y,y,r,r,y,y,y,y,y,r,f,f,r,y,y,y,r,f,f,f,f,r,y,r,f,f,e,e,f,f,r,r,f,f,e,e,f,f,r,y,r,f,f,f,f,r,y,y,y,r,f,f,r,y,y,y,y,y,r,r,y,y,y]
-    frame22 = [y,y,y,r,r,y,y,y,y,y,r,f,f,r,y,y,y,r,f,e,e,f,r,y,r,f,e,e,e,e,f,r,r,f,e,e,e,e,f,r,y,r,f,e,e,f,r,y,y,y,r,f,f,r,y,y,y,y,y,r,r,y,y,y]
-    frame23 = [y,y,y,r,r,y,y,y,y,y,r,e,e,r,y,y,y,r,e,e,e,e,r,y,r,e,e,e,e,e,e,r,r,e,e,e,e,e,e,r,y,r,e,e,e,e,r,y,y,y,r,e,e,r,y,y,y,y,y,r,r,y,y,y]
-    frame24 = [y,y,y,e,e,y,y,y,y,y,e,e,e,e,y,y,y,e,e,e,e,e,e,y,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,y,e,e,e,e,e,e,y,y,y,e,e,e,e,y,y,y,y,y,e,e,y,y,y]
-    frame25 = [y,e,e,e,e,e,e,y,e,y,e,e,e,e,y,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,y,e,e,e,e,y,e,y,e,e,e,e,e,e,y]
-    frame26 = [e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e]
-
-    ## Show each frame 0.2 seconds
-    sense.set_pixels(frame1)
-    sleep(.2)
-    sense.set_pixels(frame2)
-    sleep(.2)
-    sense.set_pixels(frame3)
-    sleep(.2)
-    sense.set_pixels(frame4)
-    sleep(.2)
-    sense.set_pixels(frame5)
-    sleep(.2)
-    sense.set_pixels(frame6)
-    sleep(.2)
-    sense.set_pixels(frame7)
-    sleep(.2)
-    sense.set_pixels(frame8)
-    sleep(.2)
-    sense.set_pixels(frame9)
-    sleep(.2)
-    sense.set_pixels(frame10)
-    sleep(.2)
-    sense.set_pixels(frame11)
-    sleep(.2)
-    sense.set_pixels(frame12)
-    sleep(.2)
-    sense.set_pixels(frame13)
-    sleep(.2)
-    sense.set_pixels(frame14)
-    sleep(.2)
-    sense.set_pixels(frame15)
-    sleep(.2)
-    sense.set_pixels(frame16)
-    sleep(.2)
-    sense.set_pixels(frame17)
-    sleep(.2)
-    sense.set_pixels(frame18)
-    sleep(.2)
-    sense.set_pixels(frame19)
-    sleep(.2)
-    sense.set_pixels(frame20)
-    sleep(.2)
-    sense.set_pixels(frame21)
-    sleep(.2)
-    sense.set_pixels(frame22)
-    sleep(.2)
-    sense.set_pixels(frame23)
-    sleep(.2)
-    sense.set_pixels(frame24)
-    sleep(.2)
-    sense.set_pixels(frame25)
-    sleep(.2)
-    sense.set_pixels(frame26)
-    sleep(.2)
-
 def show_animation():
-    x = randint(1, 8)
+    x = randint(1, 6)
     if x == 1:
         norway_animation()
     elif x == 2:
@@ -639,8 +380,4 @@ def show_animation():
         coders_selection_2()
     elif x == 6:
         coders_selection_3()
-    elif x == 7:
-        show_flower_animation()        
-    elif x == 8:
-        show_circle_animation()
-    
+        
