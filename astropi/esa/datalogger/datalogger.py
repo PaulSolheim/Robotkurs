@@ -6,7 +6,7 @@ class DataLogger:
         self.buffer = 10
         self.sense = SenseHat()
         self.batch_data = []
-        self.filename = "Datalogg-"+str(datetime.now())+".csv"
+        self.filename = "./logs/Datalogg-"+str(datetime.now())+".csv"
         self.file_setup(self.filename)        
 
     def log_data(self):

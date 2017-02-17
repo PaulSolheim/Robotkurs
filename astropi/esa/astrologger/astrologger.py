@@ -4,7 +4,7 @@ from datetime import datetime
 class AstroLogger:
     def __init__(self):
         self.sense = SenseHat()
-        self.filename = "Astrologg-"+str(datetime.now())+".csv"
+        self.filename = "./logs/Astrologg-"+str(datetime.now())+".csv"
         self.file_setup(self.filename)        
 
     def log_data(self, event, value, baseline, astronaut_status):
