@@ -418,6 +418,276 @@ def coders_selection_3():
     sense.set_pixels(image2)
     sleep(1)    
 
+def coders_selection_4():
+    b = (0, 0, 255) # Blue
+    s = (0, 200, 0,) # Grenn
+    g = (255, 255, 0) #Yellow
+    h = (0, 0, 100) # LightBlue
+
+    image1 =  [
+        g, g, h, h, h, h, h, h,
+        g, g, h, h, h, h, h, h,
+        h, h, h, s, h, h, h, h,
+        h, h, s, s, s, h, h, s,
+        h, s, s, s, s, s, s, s,
+        s, s, s, s, s, s, s, s,
+        b, b, b, b, b, b, b, b,
+        b, b, b, b, b, b, b, b
+        ]
+
+    image2 =  [
+        g, g, s, s, h, h, h, h,
+        g, g, s, s, h, h, h, h,
+        h, s, s, s, h, h, h, h,
+        s, s, s, s, s, h, h, h,
+        h, s, h, s, h, s, h, h,
+        h, s, h, s, h, g, s, h,
+        h, g, g, g, g, h, h, h,
+        h, h, h, h, h, h, h, h
+        ]
+    
+    sense.set_pixels(image1)
+    sleep(1)
+    sense.set_pixels(image2)
+    sleep(1)
+
+    g = (0, 255, 0) # Green
+    b = (0, 0, 255) # Black
+    o = (255, 127, 0) #orange
+    v = (159, 0, 255) # purple
+    w = (255, 255, 255) # white
+    r = (255, 0, 0) # red
+    y = (255, 255, 0) # yellow
+
+    image = [
+        o, o, o, o, o, o, o, o,
+        o, g, g, g, g, g, g, o,
+        g, g, b, b, g, b, b, g, 
+        y, g, b, r, g, b, r, g,
+        y, g, g, w, w, g, g, g,
+        g, v, g, g, g, g, v, g,
+        g, g, v, v, v, v, g, g,
+        g, g, g, g, g, g, g, g,
+        ]
+
+    sense.set_pixels(image)
+    sleep(1)
+
+    r = (255, 0, 0)
+    e = (0, 0, 0)
+    c = (0, 255, 255)
+    y = (255, 255, 0)
+    p = (102, 0, 204)
+    g = (0, 255, 0)
+    o = (255, 128, 0)
+    f = (255, 0, 255)
+    b = (0, 0, 255)
+    w = (255, 255, 255)
+
+    frame1 = [e,e,e,r,r,e,e,e,e,e,r,o,o,r,e,e,e,r,o,r,r,o,r,e,r,o,r,o,o,r,o,r,r,o,r,o,o,r,o,r,e,r,o,r,r,o,r,e,e,e,r,o,o,r,e,e,e,e,e,r,r,e,e,e]
+
+    sense.set_pixels(frame1)
+    sleep(1)
+
+    g = (0, 255, 0)
+    y = (255, 255, 0)
+    o = (255, 128, 0)
+    c = (0, 255, 255)
+    f = (255, 0, 255)
+    w = (255, 255, 255)
+    e = (0, 0, 0)
+    b = (0, 0, 255)
+    p = (102, 0, 204)
+    farge1 = randint(0, 255)
+    farge2 = randint(0, 255)
+    farge3 = randint(0, 255)
+    farge = (farge1, farge2, farge3)
+
+    r = farge
+
+    frame1 = [e,e,e,e,e,e,e,e,e,e,r,e,e,r,e,e,e,e,e,e,e,e,e,e,e,r,e,e,e,e,r,e,e,e,r,r,r,r,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e]
+
+    sense.set_pixels(frame1)
+    sleep(1)
+    
+    g = (0, 255, 0)
+    r = (255, 0, 0)
+    p = (102, 0, 204)
+    y = (255, 255, 0)
+    b = (0, 0, 255)
+    o = (255, 128, 0)
+    e = (0, 0, 0)
+    c = (0, 255, 255)
+    w = (255, 255, 255)
+    f = (255, 0, 255)
+
+    frame1 = [e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,e,w,w,w,b,b,b,b,e,w,w,w,r,r,r,r,e,b,b,b,b,b,b,b,e,r,r,r,r,r,r,r,e,b,b,b,b,b,b,b,e,r,r,r,r,r,r,r,e]
+
+    sense.set_pixels(frame1)
+    sleep(1)
+    
+def show_pizza_animation():
+    r = (255, 0, 0)
+    b = (0, 0, 255)
+    c = (0, 255, 255)
+    p = (102, 0, 204)
+    o = (255, 128, 0)
+    y = (255, 255, 0)
+    f = (255, 0, 255)
+    w = (255, 255, 255)
+    g = (0, 255, 0)
+    e = (0, 0, 0)
+
+    frame1 = [w,w,w,w,w,w,w,w,w,w,o,o,o,o,w,w,w,o,y,r,y,r,o,w,w,o,r,y,y,y,o,w,w,o,y,y,r,y,o,w,w,o,r,y,y,r,o,w,w,w,o,o,o,o,w,w,w,w,w,w,w,w,w,w]
+    frame2 = [w,w,w,w,w,w,w,w,w,w,o,o,o,o,w,w,w,o,r,y,y,r,o,w,w,o,y,r,y,y,o,w,w,o,r,y,r,y,o,w,w,o,y,r,y,r,o,w,w,w,o,o,o,o,w,w,w,w,w,w,w,w,w,w]
+    frame3 = [w,w,w,w,w,w,w,w,w,w,o,o,o,o,w,w,w,o,y,r,y,r,o,w,w,o,r,y,r,r,o,w,w,o,y,y,r,y,o,w,w,o,y,r,y,r,o,w,w,w,o,o,o,o,w,w,w,w,w,w,w,w,w,w]
+    frame4 = [w,w,w,w,w,w,w,w,w,w,o,o,o,o,w,w,w,o,r,y,r,y,o,w,w,o,y,r,y,y,o,w,w,o,r,r,y,r,o,w,w,o,r,y,r,y,o,w,w,w,o,o,o,o,w,w,w,w,w,w,w,w,w,w]
+
+    sense.set_pixels(frame1)
+    sleep(1)
+    sense.set_pixels(frame2)
+    sleep(1)
+    sense.set_pixels(frame3)
+    sleep(1)
+    sense.set_pixels(frame4)
+    sleep(1)
+    
+def show_random_with_frame():
+    sense.clear()
+    inorder = 0
+    i = 0
+    XRed = 255
+    RGorB = 0
+
+    X = [XRed, 0, 0]  # Red
+    O = [255, 255, 255]  # White
+
+    outline = [
+    X, X, X, X, X, X, X, X,
+    X, O, O, O, O, O, O, X,
+    X, O, O, O, O, O, O, X,
+    X, O, O, O, O, O, O, X,
+    X, O, O, O, O, O, O, X,
+    X, O, O, O, O, O, O, X,
+    X, O, O, O, O, O, O, X,
+    X, X, X, X, X, X, X, X
+    ]
+
+    sense.set_pixels(outline)
+
+    ## Show animation 30 times
+    for t in range(30):
+        x = randint(1, 6)
+        y = randint(1, 6)
+        r = randint(0, 255)
+        g = randint(0, 255)
+        b = randint(0, 255)
+        sense.set_pixel(x, y, r, g, b)
+        sleep(0.001)
+
+        i += 1
+
+        if i >= 200:
+            i = 0
+
+            if inorder == 0:
+                XRed = randint(0, 255)
+            else:
+                XRed = 255
+
+            RGorB = randint(0, 2)
+            if inorder == 0:
+                if RGorB == 0:
+                    X = [XRed, 0, 0]
+
+                    outline = [
+                    X, X, X, X, X, X, X, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, X, X, X, X, X, X, X
+                    ]
+
+                    sense.set_pixels(outline)
+                elif RGorB == 1:
+                    X = [0, XRed, 0]
+
+                    outline = [
+                    X, X, X, X, X, X, X, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, X, X, X, X, X, X, X
+                    ]
+
+                    sense.set_pixels(outline)
+                if RGorB == 2:
+                    X = [0, 0, XRed]
+
+                    outline = [
+                    X, X, X, X, X, X, X, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, X, X, X, X, X, X, X
+                    ]
+
+                    sense.set_pixels(outline)
+            else:
+                if RGorB == 0:
+                    X = [XRed, 0, 0]
+
+                    outline = [
+                        X, X, X, X, X, X, X, X,
+                        X, O, O, O, O, O, O, X,
+                        X, O, O, O, O, O, O, X,
+                        X, O, O, O, O, O, O, X,
+                        X, O, O, O, O, O, O, X,
+                        X, O, O, O, O, O, O, X,
+                        X, O, O, O, O, O, O, X,
+                        X, X, X, X, X, X, X, X
+                        ]
+                    sense.set_pixels(outline)
+                elif RGorB == 1:
+                    X = [0, XRed, 0]
+
+                    outline = [
+                    X, X, X, X, X, X, X, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, X, X, X, X, X, X, X
+                    ]
+
+                    sense.set_pixels(outline)
+                if RGorB == 2:
+                    X = [0, 0, XRed]
+
+                    outline = [
+                    X, X, X, X, X, X, X, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, O, O, O, O, O, O, X,
+                    X, X, X, X, X, X, X, X
+                    ]
+
+                    sense.set_pixels(outline)
+                    
 def show_flower_animation():
     e = (0, 0, 0)
     w = (255, 255, 255)
@@ -626,7 +896,7 @@ def show_circle_animation():
     sleep(.2)
 
 def show_animation():
-    x = randint(1, 8)
+    x = randint(1, 11)
     if x == 1:
         norway_animation()
     elif x == 2:
@@ -640,7 +910,12 @@ def show_animation():
     elif x == 6:
         coders_selection_3()
     elif x == 7:
-        show_flower_animation()        
+        coders_selection_4()
     elif x == 8:
+        show_flower_animation()        
+    elif x == 9:
         show_circle_animation()
-    
+    elif x == 10:
+        show_pizza_animation()
+    elif x == 11:
+        show_random_with_frame()
