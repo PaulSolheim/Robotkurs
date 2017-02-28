@@ -1007,9 +1007,84 @@ def canada_animation():
 
     sense.clear()
 
+def scandinavian_flags():
+    p = (102, 0, 204)
+    b = (0, 0, 255)
+    w = (255, 255, 255)
+    e = (0, 0, 0)
+    o = (255, 128, 0)
+    f = (255, 0, 255)
+    g = (0, 255, 0)
+    y = (255, 255, 0)
+    r = (255, 0, 0)
+    c = (0, 255, 255)
+
+    sweden = [
+        b,b,b,y,b,b,b,b,
+        b,b,b,y,b,b,b,b,
+        b,b,b,y,b,b,b,b,
+        y,y,y,y,y,y,y,y,
+        b,b,b,y,b,b,b,b,
+        b,b,b,y,b,b,b,b,
+        b,b,b,y,b,b,b,b,
+        e,e,e,e,e,e,e,e]
+
+    norway = [
+        r,r,w,b,w,r,r,r,
+        r,r,w,b,w,r,r,r,
+        w,w,w,b,w,w,w,w,
+        b,b,b,b,b,b,b,b,
+        w,w,w,b,w,w,w,w,
+        r,r,w,b,w,r,r,r,
+        r,r,w,b,w,r,r,r,
+        e,e,e,e,e,e,e,e]
+
+    iceland = [
+        b,b,w,r,w,b,b,b,
+        b,b,w,r,w,b,b,b,
+        w,w,w,r,w,w,w,w,
+        r,r,r,r,r,r,r,r,
+        w,w,w,r,w,w,w,w,
+        b,b,w,r,w,b,b,b,
+        b,b,w,r,w,b,b,b,
+        e,e,e,e,e,e,e,e]
+
+    finland = [
+        w,w,w,b,w,w,w,w,
+        w,w,w,b,w,w,w,w,
+        w,w,w,b,w,w,w,w,
+        b,b,b,b,b,b,b,b,
+        w,w,w,b,w,w,w,w,
+        w,w,w,b,w,w,w,w,
+        w,w,w,b,w,w,w,w,
+        e,e,e,e,e,e,e,e]
+
+    denmark = [
+        r,r,r,w,r,r,r,r,
+        r,r,r,w,r,r,r,r,
+        r,r,r,w,r,r,r,r,
+        w,w,w,w,w,w,w,w,
+        r,r,r,w,r,r,r,r,
+        r,r,r,w,r,r,r,r,
+        r,r,r,w,r,r,r,r,
+        e,e,e,e,e,e,e,e]
+
+    for x in range(4):
+        sense.set_pixels(sweden)
+        sleep(0.5)
+        sense.set_pixels(norway)
+        sleep(0.5)
+        sense.set_pixels(iceland)
+        sleep(0.5)
+        sense.set_pixels(finland)
+        sleep(0.5)
+        sense.set_pixels(denmark)
+        sleep(0.5)
+    
+    sense.clear()
 
 def show_animation():
-    x = randint(1, 14)
+    x = randint(1, 15)
     if x == 1:
         norway_animation()
     elif x == 2:
@@ -1038,3 +1113,5 @@ def show_animation():
         greenland_animation()
     elif x == 14:
         canada_animation()
+    elif x == 15:
+        scandinavian_flags()
