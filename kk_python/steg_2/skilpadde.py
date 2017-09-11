@@ -20,11 +20,11 @@ shape("gorilla.gif")
 pensize(8)
 
 sider = 3
-total_lengde = 250
-figurer = 20
+total_lengde = 210
+figurer = 18
 
 penup()
-setpos(0, 355)
+setpos(0, 300)
 
 for teller in range(figurer):
 
@@ -41,7 +41,7 @@ for teller in range(figurer):
 
     setheading(0)
     right(360/figurer * teller)
-    forward(total_lengde / figurer + 95)
+    forward(total_lengde / figurer + 90)
     sider = sider + 1
 
 home()
