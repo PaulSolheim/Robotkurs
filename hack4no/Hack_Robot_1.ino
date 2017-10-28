@@ -54,11 +54,7 @@ void setup() {
 }
 
 void loop() {
-  Output = fsm[S].out;      // sett output fra Tilstandsmaskinen
-  Robot_Output(Output);     // juster hastigheten på motorene utfra gjeldende Tilstand
-  delay(10);                // kort pause som bestemmer hvor ofte vi gjør målinger med sensorene
-  Input = Robot_Input();    // les sensorene
-  S = fsm[S].next[Input];   // neste Tilstand avhenger av input fra sensorer og gjeldende Tilstand
+
 }
 
 unsigned int Robot_Input(void) {
@@ -94,24 +90,24 @@ unsigned int Robot_Input(void) {
 void Robot_Output(unsigned int output) {
     switch (output) {
     case 0:   // På Banen
-      venstreMotor.setSpeed(80);
-      hoyreMotor.setSpeed(80);
+      venstreMotor.setSpeed(60);
+      hoyreMotor.setSpeed(60);
       break;
     case 1:   // Senter Venstre
-      venstreMotor.setSpeed(80);
+      venstreMotor.setSpeed(60);
       hoyreMotor.setSpeed(20);
       break;
     case 2:   // Til Venstre
-      venstreMotor.setSpeed(80);
+      venstreMotor.setSpeed(60);
       hoyreMotor.setSpeed(20);
       break;
     case 3:   // Senter Høyre
       venstreMotor.setSpeed(20);
-      hoyreMotor.setSpeed(80);
+      hoyreMotor.setSpeed(60);
       break;
     case 4:   // Til Høyre
       venstreMotor.setSpeed(20);
-      hoyreMotor.setSpeed(80);
+      hoyreMotor.setSpeed(60);
       break;      
     }
     forover();

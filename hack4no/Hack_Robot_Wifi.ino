@@ -1,23 +1,44 @@
-// For å legge inn nettverk og passord, 
-// Skru på roboten og koble mobilen til nettverket for din robot "ESP" og et tall
-// og gå til adressen "192.168.4.1" i nettleseren på mobilen.
+/*************************************************************
+  Download latest Blynk library here:
+    https://github.com/blynkkk/blynk-library/releases/latest
+
+    Downloads, docs, tutorials: http://www.blynk.cc
+    Sketch generator:           http://examples.blynk.cc
+    Blynk community:            http://community.blynk.cc
+
+  Note: This requires ESP8266 support package:
+    https://github.com/esp8266/Arduino
+
+  Please be sure to select the right ESP8266 module
+  in the Tools -> Board menu!
+
+  Change WiFi ssid, pass, and Blynk auth token to run :)
+ *************************************************************/
+
+/* Comment this out to disable prints and save space */
+#define BLYNK_PRINT Serial
 
 #include <ESP8266WiFi.h>
-#include <DNSServer.h>
-#include <ESP8266WebServer.h>
-#include <WiFiManager.h>
 #include <BlynkSimpleEsp8266.h>
-#include <SimpleTimer.h>
 
-char auth[] = "";                     // Legg inn auth-koden fra Appen
+// You should get Auth Token in the Blynk App.
+// Go to the Project Settings (nut icon).
+char auth[] = "YourAuthToken";
 
-void setup() {
-  WiFiManager wifiManager;
-  wifiManager.autoConnect("ESPx");    // Endre x til tallet på roboten
-  // Konfigurer blynk til å koble seg til serveren
-  Blynk.config(auth, IPAddress(192,168,43,16), 8442);
+// Your WiFi credentials.
+// Set password to "" for open networks.
+char ssid[] = "YourNetworkName";
+char pass[] = "YourPassword";
+
+void setup()
+{
+  // Debug console
+  Serial.begin(9600);
+
+  Blynk.begin(auth, ssid, pass);
 }
 
-void loop() {
+void loop()
+{
   Blynk.run();
 }
